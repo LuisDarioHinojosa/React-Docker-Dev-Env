@@ -11,15 +11,13 @@ ARG INTERNAL_WORKSPACE=/backend_app
 
 WORKDIR ${INTERNAL_WORKSPACE}
 
-COPY package.json .
-
-RUN npm install
-
 # el directorio que el contendor comparte con tu computadora (para que lo puedas editar)
-#ARG EXTERNAL_BINDMOUNT=/code 
+ARG EXTERNAL_BINDMOUNT=/code 
 
 # mete tu codigo al contendor
-#COPY ${EXTERNAL_BINDMOUNT} .
+COPY ${EXTERNAL_BINDMOUNT} .
+
+RUN npm install
 
 EXPOSE 80
 

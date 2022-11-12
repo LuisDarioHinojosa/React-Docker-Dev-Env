@@ -12,19 +12,19 @@ services:
     volumes:
       - ./my_sql_data:/var/lib/mysql
 
+
   backend:
     container_name: app_backend
-    depends_on:
-      - database
     build: ./backend
     ports:
       - '80:80'
     volumes:
       - ./backend/code:/backend_app
-      - /app/node_modules
+      - /backend_app/node_modules
     env_file:
       - ./env_variables/backend.env
-
+    depends_on:
+      - database
 
   frontend:
     container_name: app_frontend
