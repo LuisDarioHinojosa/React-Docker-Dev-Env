@@ -2,6 +2,7 @@
 React + Node Express + mysql development environment
 
 ## NOTA: AUN ANDO PROBANDO COMO FUNCIONA
+El contenedor de backend puede conectarse con la base de datos y logre alojar una web app de react (sin relación con el backend). En cuanto haga un front end para el backend sudo un ejemplo con todo integrado. Esta semana.
 
 # Notas Importantes
 - Necesitas crear una carpeta llamada ```mysql_mount``` dentro del directorio raiz para que el contenedor de mysql pueda guardar los módelos.
